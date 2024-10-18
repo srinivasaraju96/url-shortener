@@ -49,6 +49,25 @@
   color: #000000;
   cursor: copy;
 }
+.shorten-url img{
+  display: none;
+}
+.shorten-url:hover img{
+  display: inline-block;
+}
+.copied{
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  padding: 10px 10px;
+  color: #ffffff;
+  background-color: #11b52c;
+  display: none;
+}
+.copied:not(:empty){
+  display: inline-block;
+}
+
 
 @media screen and (max-width:640px){
   .app{
@@ -59,9 +78,14 @@
     height: 100%;
   }
   .url-shortener input{
+    height: 35px;
     margin-top: 50%;
   }
   .shorten-url{
     font-size: 20px;
+  }
+  .copied{
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
